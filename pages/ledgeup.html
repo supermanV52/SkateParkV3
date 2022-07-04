@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Assets/favicon.png">
+    <link rel="stylesheet" href="video.css">
+    <title>Ledge Up</title>
+</head>
+<body>
+  <main class="desktop">
+    <table>
+        <tr>
+            <td >
+                <div class="parent">
+                    <img class="image1" src="Assets/colorheader.png" />
+                    <a href="../index.html"><img class="image2" src="Assets/BMT.png" /></a>
+                    
+                    <div class="dropdown ">
+                        <span><a href=""><img src="Assets/MENU.png" alt=""></a></span>
+                
+                        <div class="dropdown-content">
+                          <p> <a href="pyramid.html"><span class="sparkling">Pyramide</span></a> / <a href="quarterpipe.html">Quarterpipe</a> / <a href="rail.html"><span class="sparkling">Rail</span></a> / <a href="stairrail.html">Stair Rail</a> / <a href="stairs.html"><span class="sparkling">Stairs</span></a> / <a href="halfpipe.html">Halfpipe</a> / <a href="ledge.html"><span class="sparkling">Ledge</span></a> / <a href="funbox.html">Funbox</a> / <a href="ledgeup.html"><span class="sparkling">Ledge Up</span></a> / <a href="community.html">Community</a> / <a href="about.html"><span class="sparkling">About</span></a></p>  </div>
+                      </div>
+                  </div>
+                  
+            </td>
+        </tr>
+    </table>
+
+    
+    
+    
+    
+   
+    <table>
+        <tr>
+            <td>
+                <div class="parent1">
+                    <img class="image11" src="Assets/footerr.png" />
+                    <a target="_blank" href="https://www.instagram.com/"><img class="image21" src="Assets/inst.png" /></a>
+                    
+                    
+                </div>
+                  
+            </td>
+        </tr>
+    </table>
+
+    
+</main>
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+// tekst effect
+function initSparkling() {
+    // kleur, path
+    const color = "#e3b6fa";
+    const svgPath = 'M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z';
+
+    // sparkling effect
+    let sparkling = function() {
+        $('.sparkling').each(function() {
+            let sparklingElement = $(this);
+            let stars = sparklingElement.find('.star');
+
+            // remove star als 6+
+            if(stars.length > 5) {
+                stars.each(function(index) {
+                    if(index === 0) {
+                        $(this).remove();
+                    }
+                });
+            }
+            // add new star
+            sparklingElement.append(addStar());
+        });
+
+        let rand = Math.round(Math.random() * 700) + 100;
+        setTimeout(sparkling, rand);
+    }
+			
+    // size + positie
+    let addStar = function() {
+        let size = Math.floor(Math.random() * 20) + 5;
+        let top = Math.floor(Math.random() * 100) - 50;
+        let left = Math.floor(Math.random() * 100);
+
+        return '<span class="star" style="top:' + top + '%; left:' + left + '%;">'
+            + '<svg width="' + size + '" height="' + size + '" viewBox="0 0 68 68" fill="none">'
+            + '<path d="' + svgPath + '" fill="' + color + '" /></svg></span>';
+    }
+
+    // execute
+    sparkling();
+}
+
+$(function() {
+    initSparkling();
+});
+</script>
+</body>
+</html>
