@@ -1,94 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="pages/Assets/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
-     
-    <title>BMTRIX</title>
-  </head>
-  <body>
 
-    <main class="desktop">
-    
-      <div class="stars"></div>
-      <div class="twinkling"></div>  
-      
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="pages/Assets/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMTRIX</title>
+</head>
 
-      <canvas class="webgl"></canvas>
-      <img src="pages/Assets/lightbulb.png" class="lights" alt="">
+<body>
 
-      <table>
-        <tr>
-            <td >
-                <div class="parent">
-                    <img class="image1" src="pages/Assets/colorheader.png" />
-                    <a href="index.html"><img class="image2" src="pages/Assets/BMT.png" /></a>
-                    
-                    <div class="dropdown ">
-                        <span><a href=""><img src="pages/Assets/MENU.png" alt=""></a></span>
-                
-                        <div class="dropdown-content">
-                          <p> <a href="pages/pyramid.html"><span class="sparkling">Pyramide</span></a> / <a href="pages/quarterpipe.html">Quarterpipe</a> / <a href="pages/rail.html"><span class="sparkling">Rail</span></a> / <a href="pages/stairrail.html">Tilted Rail</a> / <a href="pages/stairs.html"><span class="sparkling">Stairs</span></a> / <a href="pages/halfpipe.html">Halfpipe</a> / <a href="pages/ledge.html"><span class="sparkling">Ledge</span></a> / <a href="pages/funbox.html">Funbox</a> / <a href="pages/ledgeup.html"><span class="sparkling">Tilted Ledge</span></a> / <a href="pages/community.html">Community</a> / <a href="pages/about.html"><span class="sparkling">About</span></a></p>
-                        </div>
-                      </div>
-                  </div>
-            </td>
-        </tr>
-      </table>
+  <main class="desktop">
 
-      <div class="instructions-container">
-        <div class="instructions">
-          <img src="pages/Assets/closee.png" alt="close popup" class="exit-btn instructions__btn">
-          <h1><span class="sparkling">BMTriX</span></h1>
-          <h1>KLIK OP DE <span style="color: #03542b" >GROENE</span> OBSTAKELS!!!</h1>
-          <p>
-            BMTriX is een website om andere BMXers te inspireren en nieuwe tricks te leren.
-          </p>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
 
-         
 
-          <h2><span class="sparkling">Instructies:</span></h2>
-          <p>
-            -Klik en sleep om rond te kijken. <br>
-            -Control en sleep om het skatepark te bewegen. <br>
-            -Klik op een obstakel om tricks te leren.
+    <canvas class="webgl"></canvas>
+    <img src="pages/Assets/lightbulb.png" class="lights" alt="">
 
-          </p>
-        </div>
+    <table>
+      <tr>
+        <td>
+          <div class="parent">
+            <img class="image1" src="pages/Assets/colorheader.png" />
+            <a href="index.html"><img class="image2" src="pages/Assets/BMT.png" /></a>
+
+            <div class="dropdown ">
+              <span><a href=""><img src="pages/Assets/MENU.png" alt=""></a></span>
+
+              <div class="dropdown-content">
+                <p> <a href=".pages/pyramid.html"><span class="sparkling">Pyramide</span></a> / <a
+                    href=".pages/quarterpipe.html">Quarterpipe</a> / <a href=".pages/rail.html"><span
+                      class="sparkling">Rail</span></a> / <a href=".pages/stairrail.html">Tilted Rail</a> / <a
+                    href=".pages/stairs.html"><span class="sparkling">Stairs</span></a> / <a
+                    href=".pages/halfpipe.html">Halfpipe</a> / <a href=".pages/ledge.html"><span
+                      class="sparkling">Ledge</span></a> / <a href=".pages/funbox.html">Funbox</a> / <a
+                    href=".pages/ledgeup.html"><span class="sparkling">Tilted Ledge</span></a> / <a
+                    href=".pages/community.html">Community</a> / <a href=".pages/about.html"><span
+                      class="sparkling">About</span></a></p>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="instructions-container">
+      <div class="instructions">
+        <img src="pages/Assets/closee.png" alt="close popup" class="exit-btn instructions__btn">
+        <h1><span class="sparkling">BMTriX</span></h1>
+        <h1>KLIK OP DE <span style="color: #03542b">GROENE</span> OBSTAKELS!!!</h1>
+        <p>
+          BMTriX is een website om andere BMXers te inspireren en nieuwe tricks te leren.
+        </p>
+
+
+
+        <h2><span class="sparkling">Instructies:</span></h2>
+        <p>
+          -Klik en sleep om rond te kijken. <br>
+          -Control en sleep om het skatepark te bewegen. <br>
+          -Klik op een obstakel om tricks te leren.
+
+        </p>
       </div>
+    </div>
 
-      <table>
-        <tr>
-            <td>
-                <div>
-                </div>
-                <div class="parent1">
-                    <img class="image11" src="pages/Assets/footercolor.png" />
-                    <a target="_blank" href="https://www.instagram.com/"><img class="image21" src="pages/Assets/inst.png" /></a>
-                    
-                </div>
-                  
-            </td>
-        </tr>
-      </table>
-      <audio autoplay loop id="player" src="pages/Assets/BGMQ.mp3"></audio>
-      
-      <img class="gui" src="pages/Assets/colorpicker.png" alt="">
-      <button class="mute" onclick="document.getElementById('player').muted=!document.getElementById('player').muted"><img width="50"  src="pages/Assets/volume.png" alt=""></button>
+    <table>
+      <tr>
+        <td>
+          <div>
+          </div>
+          <div class="parent1">
+            <img class="image11" src="pages/Assets/footercolor.png" />
+            <a target="_blank" href="https://www.instagram.com/"><img class="image21" src="pages/Assets/inst.png" /></a>
 
-      
+          </div>
 
-      <div class="loading-bar"></div>
-      <div class="loading-curtain"></div>
-
-    </main>
+        </td>
+      </tr>
+    </table>
+    <audio loop id="player" src="pages/Assets/BGMQ.mp3"></audio>
+    <img class="gui" src="pages/Assets/colorpicker.png" alt="">
+    <button id="playBtn" class="mute">
+      <img id="playIcon" width="50" src="pages/Assets/muted.png" alt="">
+    </button>
+    <img class="gui" src="pages/Assets/colorpicker.png" alt="">
 
 
 
+    <div class="loading-bar"></div>
+    <div class="loading-curtain"></div>
 
-
+  </main>
 
 
 
@@ -105,71 +111,90 @@
 
 
 
-    <main class="mobile">
-      <table>
-        <tr>
-            <td >
-                <div class="parent">
-                    <img class="image1" src="pages/Assets/mobilehead.png" />
-                    <a href="index.html"><img class="image2" src="pages/Assets/BMT.png" /></a>
-                   
-                    
-                    
-                  </div>
-            </td>
-        </tr>
+
+
+
+
+
+  <main class="mobile">
+    <table>
+      <tr>
+        <td>
+          <div class="parent">
+            <img class="image1" src="pages/Assets/mobilehead.png" />
+            <a href="index.html"><img class="image2" src="pages/Assets/BMT.png" /></a>
+
+
+
+          </div>
+        </td>
+      </tr>
     </table>
 
     <table class="menu">
-      <tr >
-        <td><a href="pages/funbox.html"><img style="width:65% ; height: 65%;" src="pages/Assets/funbox.png" alt=""></a></td>
-        <td><a href="pages/halfpipe.html"><img style="width:65% ; height: 65%;" src="pages/Assets/halfpipe.png" alt=""></a></td>
+      <tr>
+        <td><a href="pages/funbox.html"><img style="width:65% ; height: 65%;" src="pages/Assets/funbox.png" alt=""></a>
+        </td>
+        <td><a href="pages/halfpipe.html"><img style="width:65% ; height: 65%;" src="pages/Assets/halfpipe.png"
+              alt=""></a></td>
       </tr>
-      
-      <tr >
-        <td><a href="pages/ledge.html"><img style="width:65% ; height: 65%;" src="pages/Assets/ledge.png" alt=""></a></td>
-        <td><a href="pages/pyramid.html"><img style="width:65% ; height: 65%;" src="pages/Assets/pyramidd.png" alt=""></a></td>
-      </tr>
-      
-      <tr >
-        <td><a href="pages/rail.html"><img style="width:65% ; height: 65%;" src="pages/Assets/rail.png" alt=""></a></td>
-        <td><a href="pages/quarterpipe.html"><img style="width:65% ; height: 65%;" src="pages/Assets/quarter.png" alt=""></a></td>
-      </tr>
-      <tr >
-        <td><a href="pages/stairs.html"><img style="width:65% ; height: 65%;" src="pages/Assets/stairs.png" alt=""></a></td>
-        <td><a href="pages/stairrail.html"><img style="width:65% ; height: 65%;" src="pages/Assets/tiltedrail.png" alt=""></a></td>
-      </tr>
-      <tr >
-        <td><a href="pages/ledgeup.html"><img style="width:65% ; height: 65%;" src="pages/Assets/tiltedledge.png" alt=""></a></td>
-        <td><a href="pages/community.html"><img style="width:65% ; height: 65%;" src="pages/Assets/community.png" alt=""></a></td>
-      </tr>
-      <tr >
-        <td><a href="pages/about.html"><img style="width:65% ; height: 65%;" src="pages/Assets/about.png" alt=""></a></td>
-        
-      </tr>
-    </table>
-  
-      
-    
-      
-      <button class="mute" onclick="document.getElementById('player').muted=!document.getElementById('player').muted"><img width="40"  src="pages/Assets/volume.png" alt=""></button>
-      <br><br><br>
-      <table>
-        <tr>
-            <td>
-                <div class="parent1">
-                    <img class="image11" src="pages/Assets/footerr.png" />
-                    <a target="_blank" href="https://www.instagram.com/"><img class="image21" src="pages/Assets/inst.png" /></a>
-                </div>
-                  
-            </td>
-        </tr>
-    </table>
-      
 
-    </main>
-    
-    <script type="module" src="/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </body>
+      <tr>
+        <td><a href="pages/ledge.html"><img style="width:65% ; height: 65%;" src="pages/Assets/ledge.png" alt=""></a>
+        </td>
+        <td><a href="pages/pyramid.html"><img style="width:65% ; height: 65%;" src="pages/Assets/pyramidd.png"
+              alt=""></a></td>
+      </tr>
+
+      <tr>
+        <td><a href="pages/rail.html"><img style="width:65% ; height: 65%;" src="pages/Assets/rail.png" alt=""></a></td>
+        <td><a href="pages/quarterpipe.html"><img style="width:65% ; height: 65%;" src="pages/Assets/quarter.png"
+              alt=""></a></td>
+      </tr>
+      <tr>
+        <td><a href="pages/stairs.html"><img style="width:65% ; height: 65%;" src="pages/Assets/stairs.png" alt=""></a>
+        </td>
+        <td><a href="pages/stairrail.html"><img style="width:65% ; height: 65%;" src="pages/Assets/tiltedrail.png"
+              alt=""></a></td>
+      </tr>
+      <tr>
+        <td><a href="pages/ledgeup.html"><img style="width:65% ; height: 65%;" src="pages/Assets/tiltedledge.png"
+              alt=""></a></td>
+        <td><a href="pages/community.html"><img style="width:65% ; height: 65%;" src="pages/Assets/community.png"
+              alt=""></a></td>
+      </tr>
+      <tr>
+        <td><a href="pages/about.html"><img style="width:65% ; height: 65%;" src="pages/Assets/about.png" alt=""></a>
+        </td>
+
+      </tr>
+    </table>
+
+
+
+    <audio loop id="player" src="pages/Assets/BGMQ.mp3"></audio>
+    <img class="gui" src="pages/Assets/colorpicker.png" alt="">
+    <button id="playBtn" class="mute">
+      <img id="playIcon" width="50" src="pages/Assets/muted.png" alt="">
+    </button>
+    <br><br><br>
+    <table>
+      <tr>
+        <td>
+          <div class="parent1">
+            <img class="image11" src="pages/Assets/footerr.png" />
+            <a target="_blank" href="https://www.instagram.com/"><img class="image21" src="pages/Assets/inst.png" /></a>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+
+
+  </main>
+
+  <script type="module" src="/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
 </html>

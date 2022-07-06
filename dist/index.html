@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMTRIX</title>
+  <script type="module" crossorigin src="/assets/index.6f3081e9.js"></script>
+  <link rel="stylesheet" href="/assets/index.23299acd.css">
+</head>
+
+<body>
+
+  <main class="desktop">
+
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+
+    <canvas class="webgl"></canvas>
+    <img src="/assets/lightbulb.6fcf2607.png" class="lights" alt="">
+
+    <table>
+      <tr>
+        <td>
+          <div class="parent">
+            <img class="image1" src="/assets/colorheader.f45b8bc5.png" />
+            <a href="index.html"><img class="image2" src="/assets/BMT.7648fd36.png" /></a>
+
+            <div class="dropdown ">
+              <span><a href=""><img src="/assets/MENU.587dfda2.png" alt=""></a></span>
+
+              <div class="dropdown-content">
+                <p> <a href=".pages/pyramid.html"><span class="sparkling">Pyramide</span></a> / <a
+                    href=".pages/quarterpipe.html">Quarterpipe</a> / <a href=".pages/rail.html"><span
+                      class="sparkling">Rail</span></a> / <a href=".pages/stairrail.html">Tilted Rail</a> / <a
+                    href=".pages/stairs.html"><span class="sparkling">Stairs</span></a> / <a
+                    href=".pages/halfpipe.html">Halfpipe</a> / <a href=".pages/ledge.html"><span
+                      class="sparkling">Ledge</span></a> / <a href=".pages/funbox.html">Funbox</a> / <a
+                    href=".pages/ledgeup.html"><span class="sparkling">Tilted Ledge</span></a> / <a
+                    href=".pages/community.html">Community</a> / <a href=".pages/about.html"><span
+                      class="sparkling">About</span></a></p>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="instructions-container">
+      <div class="instructions">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsSAAALEgHS3X78AAAA0klEQVRIib2W4Q3EIAiFX24CR3EERnAER+oIHa2bcOGiF4+KrdcgCX8Kfk8FtWBm0wEkADuAAwArP0osDRndjwAZUMsll24JANgmwNq3oUBZ8r/w6ntX4OHMzZW0e/5NCCEwEXGM8RImOZIrY1SMWoGfgsqAajlnEy6xajJGd1lhf1rxNKvWeiItXMxYbTILqwGtyCimC37aniuRCXg9H+MiauAEvPp12/VEbsL5hQXmvkXuRXZvU9+D5n5VLLns3K/rJQ/OkidzyaOvhJ79tjDjDSAHqFAMWkdMAAAAAElFTkSuQmCC" alt="close popup" class="exit-btn instructions__btn">
+        <h1><span class="sparkling">BMTriX</span></h1>
+        <h1>KLIK OP DE <span style="color: #03542b">GROENE</span> OBSTAKELS!!!</h1>
+        <p>
+          BMTriX is een website om andere BMXers te inspireren en nieuwe tricks te leren.
+        </p>
+
+
+
+        <h2><span class="sparkling">Instructies:</span></h2>
+        <p>
+          -Klik en sleep om rond te kijken. <br>
+          -Control en sleep om het skatepark te bewegen. <br>
+          -Klik op een obstakel om tricks te leren.
+
+        </p>
+      </div>
+    </div>
+
+    <table>
+      <tr>
+        <td>
+          <div>
+          </div>
+          <div class="parent1">
+            <img class="image11" src="/assets/footercolor.03935856.png" />
+            <a target="_blank" href="https://www.instagram.com/"><img class="image21" src="/assets/inst.d4107794.png" /></a>
+
+          </div>
+
+        </td>
+      </tr>
+    </table>
+    <audio loop id="player" src="pages/Assets/BGMQ.mp3"></audio>
+    <img class="gui" src="/assets/colorpicker.6f01821b.png" alt="">
+    <button id="playBtn" class="mute">
+      <img id="playIcon" width="50" src="data:image/png;base64,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" alt="">
+    </button>
+    <img class="gui" src="/assets/colorpicker.6f01821b.png" alt="">
+
+
+
+    <div class="loading-bar"></div>
+    <div class="loading-curtain"></div>
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <main class="mobile">
+    <table>
+      <tr>
+        <td>
+          <div class="parent">
+            <img class="image1" src="/assets/mobilehead.50436a16.png" />
+            <a href="index.html"><img class="image2" src="/assets/BMT.7648fd36.png" /></a>
+
+
+
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <table class="menu">
+      <tr>
+        <td><a href="pages/funbox.html"><img style="width:65% ; height: 65%;" src="/assets/funbox.7ea1fbbc.png" alt=""></a>
+        </td>
+        <td><a href="pages/halfpipe.html"><img style="width:65% ; height: 65%;" src="/assets/halfpipe.42a3f0ef.png"
+              alt=""></a></td>
+      </tr>
+
+      <tr>
+        <td><a href="pages/ledge.html"><img style="width:65% ; height: 65%;" src="/assets/ledge.5ed3daca.png" alt=""></a>
+        </td>
+        <td><a href="pages/pyramid.html"><img style="width:65% ; height: 65%;" src="/assets/pyramidd.ae48e72b.png"
+              alt=""></a></td>
+      </tr>
+
+      <tr>
+        <td><a href="pages/rail.html"><img style="width:65% ; height: 65%;" src="/assets/rail.c2b3c172.png" alt=""></a></td>
+        <td><a href="pages/quarterpipe.html"><img style="width:65% ; height: 65%;" src="/assets/quarter.29b9e95e.png"
+              alt=""></a></td>
+      </tr>
+      <tr>
+        <td><a href="pages/stairs.html"><img style="width:65% ; height: 65%;" src="/assets/stairs.06344b6f.png" alt=""></a>
+        </td>
+        <td><a href="pages/stairrail.html"><img style="width:65% ; height: 65%;" src="/assets/tiltedrail.bd90fc6f.png"
+              alt=""></a></td>
+      </tr>
+      <tr>
+        <td><a href="pages/ledgeup.html"><img style="width:65% ; height: 65%;" src="/assets/tiltedledge.6b4f12a0.png"
+              alt=""></a></td>
+        <td><a href="pages/community.html"><img style="width:65% ; height: 65%;" src="/assets/community.64848fdc.png"
+              alt=""></a></td>
+      </tr>
+      <tr>
+        <td><a href="pages/about.html"><img style="width:65% ; height: 65%;" src="/assets/about.2f748e67.png" alt=""></a>
+        </td>
+
+      </tr>
+    </table>
+
+
+
+    <audio loop id="player" src="pages/Assets/BGMQ.mp3"></audio>
+    <img class="gui" src="/assets/colorpicker.6f01821b.png" alt="">
+    <button id="playBtn" class="mute">
+      <img id="playIcon" width="50" src="data:image/png;base64,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" alt="">
+    </button>
+    <br><br><br>
+    <table>
+      <tr>
+        <td>
+          <div class="parent1">
+            <img class="image11" src="/assets/footerr.514f4567.png" />
+            <a target="_blank" href="https://www.instagram.com/"><img class="image21" src="/assets/inst.d4107794.png" /></a>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+
+
+  </main>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>

@@ -185,6 +185,7 @@ folder.add(light8, 'intensity').min(0).max(20).step(0.001).name("light8 intensit
 
 // group all objects
 const group = new THREE.Group()
+group.add(light1, light2, light3, light4, light5, light6, light7, light8)
 
 // add model to group 
 gltfLoader.load(
@@ -197,157 +198,343 @@ gltfLoader.load(
 
 // Transparant box rond obstakels
 const communityBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(8, 2, 8),
+    new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
             
         }
     )
 )
 group.add(communityBox)
 communityBox.position.x = 48.1
-communityBox.position.y = 1.18
-communityBox.position.z = 10
+communityBox.position.y = 8
+communityBox.position.z = 10 
 
-
-const RailBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(20, 2, 2),
+const communityBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
+            
+        }
+    )
+)
+group.add(communityBoxLine)
+communityBoxLine.position.x = 48.1
+communityBoxLine.position.y = 5
+communityBoxLine.position.z = 10 
+communityBoxLine.rotation.x = Math.PI / 1
+
+const RailBox = new THREE.Mesh(
+    new THREE.CircleBufferGeometry(1, 48),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
         }
     )
 )
 group.add(RailBox)
 RailBox.position.x = 38.1
-RailBox.position.y = 1.18
+RailBox.position.y = 9
 RailBox.position.z = -15.7
 
-const halfPipeBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(12, 3.6, 12),
+const railBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
+            
+        }
+    )
+)
+group.add(railBoxLine)
+railBoxLine.position.x = 38.1
+railBoxLine.position.y = 6
+railBoxLine.position.z = -15.7
+railBoxLine.rotation.x = Math.PI / 1
+
+const halfPipeBox = new THREE.Mesh(
+    new THREE.CircleBufferGeometry(1, 48),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
         }
     )
 )
 group.add(halfPipeBox)
 halfPipeBox.position.x = 65.24
-halfPipeBox.position.y = 1.9
+halfPipeBox.position.y = 10
 halfPipeBox.position.z = -14.47
 
-const ledgeBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(15, 2, 4),
+const halfPipeBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
+            
+        }
+    )
+)
+group.add(halfPipeBoxLine)
+halfPipeBoxLine.position.x = 65.24
+halfPipeBoxLine.position.y = 7
+halfPipeBoxLine.position.z = -14.47
+halfPipeBoxLine.rotation.x = Math.PI / 1
+
+const ledgeBox = new THREE.Mesh(
+    new THREE.CircleBufferGeometry(1, 48),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
         }
     )
 )
 group.add(ledgeBox)
 ledgeBox.position.x = 37.85
-ledgeBox.position.y = 1.18
+ledgeBox.position.y = 10
 ledgeBox.position.z = -25.38
 
-const pyramidBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(10, 2, 10),
+const legdeBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
+            
+        }
+    )
+)
+group.add(legdeBoxLine)
+legdeBoxLine.position.x = 37.85
+legdeBoxLine.position.y = 7
+legdeBoxLine.position.z = -25.38
+legdeBoxLine.rotation.x = Math.PI / 1
+
+
+const pyramidBox = new THREE.Mesh(
+    new THREE.CircleBufferGeometry(1, 48),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
         }
     )
 )
 group.add(pyramidBox)
 pyramidBox.position.x = -5.35
-pyramidBox.position.y = 1.18
+pyramidBox.position.y = 10
 pyramidBox.position.z = -4.04
 
-const stairRailBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(10, 3, 10),
+const pyramidBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
+            
+        }
+    )
+)
+group.add(pyramidBoxLine)
+pyramidBoxLine.position.x = -5.35
+pyramidBoxLine.position.y = 7
+pyramidBoxLine.position.z = -4.04
+pyramidBoxLine.rotation.x = Math.PI / 1
+
+
+const stairRailBox = new THREE.Mesh(
+    new THREE.CircleBufferGeometry(1, 48),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
         }
     )
 )
 group.add(stairRailBox)
 stairRailBox.position.x = 31.16
-stairRailBox.position.y = 2.2
+stairRailBox.position.y = 10
 stairRailBox.position.z = 14.21
 
-const stairBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(10, 3, 10),
+const stairRailBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
+        }
+    )
+)
+group.add(stairRailBoxLine)
+stairRailBoxLine.position.x = 31.16
+stairRailBoxLine.position.y = 7
+stairRailBoxLine.position.z = 14.21
+stairRailBoxLine.rotation.x = Math.PI / 1
+
+
+const stairBox = new THREE.Mesh(
+    new THREE.CircleBufferGeometry(1, 48),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
         }
     )
 )
 group.add(stairBox)
 stairBox.position.x = 23.34
-stairBox.position.y = 1.4
+stairBox.position.y = 10
 stairBox.position.z = -5.35
 
-
-const quarterpipeBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(17, 5, 70),
+const stairBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
+        }
+    )
+)
+group.add(stairBoxLine)
+stairBoxLine.position.x = 23.34
+stairBoxLine.position.y = 7
+stairBoxLine.position.z = -5.35
+stairBoxLine.rotation.x = Math.PI / 1
+
+const quarterpipeBox = new THREE.Mesh(
+    new THREE.CircleBufferGeometry(1, 48),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
         }
     )
 )
 group.add(quarterpipeBox)
 quarterpipeBox.position.x = -34
-quarterpipeBox.position.y = 2.1
+quarterpipeBox.position.y = 15
 quarterpipeBox.position.z = 11.6
 
-const funboxBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(15, 3, 7),
+const quarterpipeBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
+        }
+    )
+)
+group.add(quarterpipeBoxLine)
+quarterpipeBoxLine.position.x = -34
+quarterpipeBoxLine.position.y = 12
+quarterpipeBoxLine.position.z = 11.6
+quarterpipeBoxLine.rotation.x = Math.PI / 1
+
+const funboxBox = new THREE.Mesh(
+    new THREE.CircleBufferGeometry(1, 48),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
         }
     )
 )
 group.add(funboxBox)
 funboxBox.position.x = 16.3
-funboxBox.position.y = 1.7
+funboxBox.position.y = 10
 funboxBox.position.z = -23.6
 
-const ledgeupBox = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(15, 3, 15),
+const funBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
     new THREE.MeshBasicMaterial(
         {
-            color: "#fff",
+            color: "#8932CC",
+            side: THREE.DoubleSide,
             transparent: true,
-            opacity: 0,
+            opacity: 1,
+        }
+    )
+)
+group.add(funBoxLine)
+funBoxLine.position.x = 16.3
+funBoxLine.position.y = 7
+funBoxLine.position.z = -23.6
+funBoxLine.rotation.x = Math.PI / 1
+
+const ledgeupBox = new THREE.Mesh(
+    new THREE.CircleBufferGeometry(1, 48),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
         }
     )
 )
 group.add(ledgeupBox)
 ledgeupBox.position.x = -11.86
-ledgeupBox.position.y = 1.8
+ledgeupBox.position.y = 10
 ledgeupBox.position.z = 25.95
+
+const ledgeupBoxLine = new THREE.Mesh(
+    new THREE.ConeBufferGeometry(0.1, 4.5),
+    new THREE.MeshBasicMaterial(
+        {
+            color: "#8932CC",
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 1,
+        }
+    )
+)
+group.add(ledgeupBoxLine)
+ledgeupBoxLine.position.x = -11.86
+ledgeupBoxLine.position.y = 7
+ledgeupBoxLine.position.z = 25.95
+ledgeupBoxLine.rotation.x = Math.PI / 1
 
 // group alle boxes
 scene.add(group)
@@ -428,51 +615,6 @@ window.addEventListener('mousedown', () =>
     }
 })
 
-
-// hover pointer
-window.addEventListener('hover', () => 
-{
-    if(currentIntersect)
-    {
-        switch(currentIntersect.object)
-        {
-            case communityBox: 
-            document.body.classList.add("pointer")
-            break
-            case RailBox: 
-            document.body.classList.add("pointer")
-            break
-            case halfPipeBox: 
-            document.body.classList.add("pointer")
-            break
-            case ledgeBox: 
-            document.body.classList.add("pointer")
-            break
-            case pyramidBox: 
-            document.body.classList.add("pointer")
-            break
-            case stairRailBox: 
-            document.body.classList.add("pointer")
-            break
-            case stairBox: 
-            document.body.classList.add("pointer")
-            break
-            case quarterpipeBox: 
-            document.body.classList.add("pointer")
-            break
-            case funboxBox: 
-            document.body.classList.add("pointer")
-            break
-            case ledgeupBox: 
-            document.body.classList.add("pointer")
-            break
-        }
-    }
-})
-
-
-
-
 // size
 const sizes = {
     width: window.innerWidth,
@@ -496,14 +638,16 @@ window.addEventListener('resize', () =>
 
 // Camera
 const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 1000)
-camera.position.x = 50
-camera.position.y = 50
+camera.position.x = 60
+camera.position.y = 40
 camera.position.z = 100
 scene.add(camera)
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
 controls.enableDamping = true
+controls.minDistance = 40
+controls.maxDistance = 110
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({
@@ -522,6 +666,7 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime()
 
+    group.rotation.y = elapsedTime * 0.02
     controls.update()
 
     renderer.render(scene, camera)
@@ -535,6 +680,80 @@ const tick = () =>
     {
         if(!currentIntersect)
         {
+            currentIntersect = intersects[0]
+            switch(currentIntersect.object)
+            {
+                case communityBox: 
+                document.body.classList.add("pointer")
+                gsap.to(communityBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case RailBox: 
+                document.body.classList.add("pointer")
+                gsap.to(RailBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case halfPipeBox: 
+                document.body.classList.add("pointer")
+                gsap.to(halfPipeBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case ledgeBox: 
+                document.body.classList.add("pointer")
+                gsap.to(ledgeBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case pyramidBox: 
+                document.body.classList.add("pointer")
+                gsap.to(pyramidBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case stairRailBox: 
+                document.body.classList.add("pointer")
+                gsap.to(stairRailBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case stairBox: 
+                document.body.classList.add("pointer")
+                gsap.to(stairBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case quarterpipeBox: 
+                document.body.classList.add("pointer")
+                gsap.to(quarterpipeBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case funboxBox: 
+                document.body.classList.add("pointer")
+                gsap.to(funboxBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case ledgeupBox: 
+                document.body.classList.add("pointer")
+                gsap.to(ledgeupBox.rotation, {y: 6, z: 2, duration: 2,})
+                break
+                case communityBoxLine: 
+                document.body.classList.add("pointer")
+                break
+                case railBoxLine: 
+                document.body.classList.add("pointer")
+                break
+                case halfPipeBoxLine: 
+                document.body.classList.add("pointer")
+                break
+                case legdeBoxLine: 
+                document.body.classList.add("pointer")
+                break
+                case pyramidBoxLine: 
+                document.body.classList.add("pointer")
+                break
+                case stairRailBoxLine: 
+                document.body.classList.add("pointer")
+                break
+                case stairBoxLine: 
+                document.body.classList.add("pointer")
+                break
+                case quarterpipeBoxLine: 
+                document.body.classList.add("pointer")
+                break
+                case funboxLineBoxLine: 
+                document.body.classList.add("pointer")
+                break
+                case ledgeupBoxLine: 
+                document.body.classList.add("pointer")
+                break
+            }
         }
 
         currentIntersect = intersects[0]
@@ -543,6 +762,50 @@ const tick = () =>
     {
         if(currentIntersect)
         {
+            document.body.classList.remove("pointer")
+            // switch(currentIntersect.object)
+            // {
+            //     case communityBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(communityBox.rotation, {y: -3, duration: 2, transition:"ease"})
+            //     break
+            //     case RailBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(RailBox.rotation, {y: -3, duration: 2, transition:"ease"})
+            //     break
+            //     case halfPipeBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(halfPipeBox.rotation, {y: -3, z:1, duration: 2, transition:"ease"})
+            //     break
+            //     case ledgeBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(ledgeBox.rotation, {y: -3, z:1, duration: 0.5, transition:"ease"})
+            //     break
+            //     case pyramidBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(pyramidBox.rotation, {y: -3, z:1, duration: 0.5, transition:"ease"})
+            //     break
+            //     case stairRailBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(stairRailBox.rotation, {y: -3, z:1, duration: 0.5, transition:"ease"})
+            //     break
+            //     case stairBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(stairBox.rotation, {y: -3, z:1, duration: 0.5, transition:"ease"})
+            //     break
+            //     case quarterpipeBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(quarterpipeBox.rotation, {y: -3, z:1, duration: 0.5, transition:"ease"})
+            //     break
+            //     case funboxBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(funboxBox.rotation, {y: -3, z:1, duration: 0.5, transition:"ease"})
+            //     break
+            //     case ledgeupBox: 
+            //     document.body.classList.add("pointer")
+            //     gsap.to(ledgeupBox.rotation, {y: -3, z:1, duration: 0.5, transition:"ease"})
+            //     break
+            // }
         }
         currentIntersect = null
     }     
@@ -613,3 +876,31 @@ function initSparkling() {
 $(function() {
     initSparkling();
 });
+
+/**
+ * MUSIC
+ */
+
+const player = document.querySelector('#player');
+const playBtn = document.querySelector('#playBtn');
+const playIcon = document.querySelector('#playIcon');
+
+playBtn.addEventListener('click', () => {
+    if(player.paused) {
+        player.play();
+        playBtn.classList.add('playing');
+        playIcon.src="pages/Assets/volume.png";
+        console.log("play")
+    } else {
+        player.pause();
+        playBtn.classList.remove('playing');
+        console.log("paused")
+        playIcon.src="pages/Assets/muted.png";
+    }
+})
+
+{/* <audio loop id="player" src="/Assets/BGMQ.mp3"></audio>
+<img class="gui" src="/Assets/colorpicker.png" alt="">
+<button id="playBtn" class="mute">
+  <img id="playIcon" width="50" src="/Assets/muted.png" alt="">
+</button> */}

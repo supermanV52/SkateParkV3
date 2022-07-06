@@ -1,0 +1,203 @@
+@font-face {
+  font-family: voltec;
+  src: url(Font/Voltec\ Free\ Version.ttf);
+}
+@font-face {
+  font-family: airstrike;
+  src: url(Font/airstrike.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('BackGrounds/Color.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0A0923;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+/*Navigation*/
+.dropdown {
+width: 5%;
+margin: 0 auto;
+left: 0;
+right: 0;
+margin-top: -4.5%;
+position: absolute;
+}
+
+div { 
+  text-align: center;
+}
+
+.dropdown-content {
+font-family: voltec;
+display: none;
+position: absolute;
+width: 950%;
+margin-left: -420%;
+z-index: 1;
+border: 1px solid #3deb34;
+background-color: #08071D ;
+text-align: center;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  color: #ABA191 ;
+  font-size: 100%;
+}
+
+.dropdown-content p {
+  text-decoration: none;
+  color: #3deb34 ;
+  font-size: larger;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image2 {
+  position: absolute;
+  width: 20%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 22%;   
+}
+
+/*footer*/
+.parent1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.image11 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.image21 {
+  position: absolute;
+  width: 4%;
+  margin: 0 auto;
+  left: 0%;
+  right: 0;
+  top: 35%;   
+}
+
+
+/*body*/
+main {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+td img { 
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+}
+
+td {
+  margin: 0;
+  padding: 10px;
+}
+
+.twee {
+  height: 175px;
+}
+
+
+
+
+/*scrolbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0B28; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #8932CC; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #56B04A; 
+}
+
+
+/* sparkling stars */
+
+@keyframes comeInOut {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+
+.sparkling {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+
+}
+
+.sparkling > span {
+  position: absolute;
+  display: block;
+  animation: comeInOut 1000ms forwards;
+}
+
+.sparkling > span > svg {
+  display: block;
+  animation: spin 1000ms linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
