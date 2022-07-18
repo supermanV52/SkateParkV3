@@ -25,7 +25,7 @@ const parameters = {
 // colorpallette knop
 const guiBtn = document.querySelector('.gui')
 let visible = false
-gui.hide()
+
 
 guiBtn.onclick = () =>
 {
@@ -79,6 +79,14 @@ const canvas = document.querySelector('canvas.webgl')
 // de scene
 const scene = new THREE.Scene()
 
+// EXTRA
+// Light that works like the sun to brighten the scene a bit remove if you don't want it
+const sun = new THREE.DirectionalLight(0x404040, 1.2)
+sun.position.y = 22
+gui.add(sun.position, 'x').min(-50).max(50).step(1)
+gui.add(sun.position, 'y').min(-50).max(500).step(1)
+gui.add(sun.position, 'z').min(-50).max(50).step(1)
+scene.add(sun)
 
 // Lights posities
 const light1 = new THREE.PointLight(parameters.color, 10, 30)
@@ -195,17 +203,30 @@ gltfLoader.load(
         group.add(gltf.scene)
     }
 )
+/**
+ * LOAD ALL THE TEXTURES
+ */
+const textureLoader = new THREE.TextureLoader()
+const icon1 = textureLoader.load('/icon1.png')
+const icon2 = textureLoader.load('/icon2.png')
+const icon3 = textureLoader.load('/icon3.png')
+const icon4 = textureLoader.load('/icon4.png')
+const icon5 = textureLoader.load('/icon5.png')
+const icon6 = textureLoader.load('/icon6.png')
+const icon7 = textureLoader.load('/icon7.png')
+const icon8 = textureLoader.load('/icon8.png')
+const icon9 = textureLoader.load('/icon9.png')
+const icon10 = textureLoader.load('/icon10.png')
 
 // Transparant box rond obstakels
 const communityBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
-            
+            map: icon1,
         }
     )
 )
@@ -236,10 +257,10 @@ const RailBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
+            map: icon7
         }
     )
 )
@@ -270,7 +291,7 @@ const halfPipeBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
+            map: icon3,
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
@@ -304,7 +325,7 @@ const ledgeBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
+            map: icon4,
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
@@ -339,7 +360,7 @@ const pyramidBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
+            map: icon5,
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
@@ -374,7 +395,7 @@ const stairRailBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
+            map: icon10,
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
@@ -408,7 +429,7 @@ const stairBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
+            map: icon8,
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
@@ -441,7 +462,7 @@ const quarterpipeBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
+            map: icon6,
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
@@ -474,7 +495,7 @@ const funboxBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
+            map: icon2,
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
@@ -507,7 +528,7 @@ const ledgeupBox = new THREE.Mesh(
     new THREE.CircleBufferGeometry(1, 48),
     new THREE.MeshBasicMaterial(
         {
-            color: "#8932CC",
+            map: icon9,
             side: THREE.DoubleSide,
             transparent: true,
             opacity: 1,
@@ -685,43 +706,43 @@ const tick = () =>
             {
                 case communityBox: 
                 document.body.classList.add("pointer")
-                gsap.to(communityBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(communityBox.rotation, {y: 6, duration: 2,})
                 break
                 case RailBox: 
                 document.body.classList.add("pointer")
-                gsap.to(RailBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(RailBox.rotation, {y: 6, duration: 2,})
                 break
                 case halfPipeBox: 
                 document.body.classList.add("pointer")
-                gsap.to(halfPipeBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(halfPipeBox.rotation, {y: 6, duration: 2,})
                 break
                 case ledgeBox: 
                 document.body.classList.add("pointer")
-                gsap.to(ledgeBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(ledgeBox.rotation, {y: 6, duration: 2,})
                 break
                 case pyramidBox: 
                 document.body.classList.add("pointer")
-                gsap.to(pyramidBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(pyramidBox.rotation, {y: 6, duration: 2,})
                 break
                 case stairRailBox: 
                 document.body.classList.add("pointer")
-                gsap.to(stairRailBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(stairRailBox.rotation, {y: 6, duration: 2,})
                 break
                 case stairBox: 
                 document.body.classList.add("pointer")
-                gsap.to(stairBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(stairBox.rotation, {y: 6, duration: 2,})
                 break
                 case quarterpipeBox: 
                 document.body.classList.add("pointer")
-                gsap.to(quarterpipeBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(quarterpipeBox.rotation, {y: 6, duration: 2,})
                 break
                 case funboxBox: 
                 document.body.classList.add("pointer")
-                gsap.to(funboxBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(funboxBox.rotation, {y: 6, duration: 2,})
                 break
                 case ledgeupBox: 
                 document.body.classList.add("pointer")
-                gsap.to(ledgeupBox.rotation, {y: 6, z: 2, duration: 2,})
+                gsap.to(ledgeupBox.rotation, {y: 6, duration: 2,})
                 break
                 case communityBoxLine: 
                 document.body.classList.add("pointer")
